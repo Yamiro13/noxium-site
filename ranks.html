@@ -1,1 +1,186 @@
 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOXIUM — Система рангов</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #08060d;
+  color: #eee;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 22px 8%;
+  background: #0c0912;
+  border-bottom: 1px solid #743ba5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #c99aff;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+header a {
+  color: #c99aff;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 75px 20px;
+  background: radial-gradient(ellipse, #28123e, #08060d 75%);
+}
+
+h1 {
+  color: #e7caff;
+  letter-spacing: 7px;
+  font-size: clamp(30px, 7vw, 55px);
+  text-shadow: 0 0 20px #913be0;
+}
+
+.subtitle {
+  color: #b88ae0;
+  letter-spacing: 4px;
+}
+
+section {
+  padding: 55px 8%;
+  text-align: center;
+}
+
+h2 {
+  color: #d4a5ff;
+  letter-spacing: 4px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.card {
+  padding: 28px 20px;
+  background: #160e20;
+  border: 1px solid #67378e;
+  transition: .3s;
+}
+
+.card:hover {
+  border-color: #c18aff;
+  box-shadow: 0 0 20px #55247a;
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #d4a5ff;
+  letter-spacing: 2px;
+}
+
+.card p {
+  color: #b9adca;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 13px 25px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #a75be8;
+}
+
+.button:hover {
+  background: #8136b5;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #8e7c9e;
+  border-top: 1px solid #572b82;
+}
+
+@media(max-width:600px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">NOXIUM</div>
+  <a href="index.html">← НА ГЛАВНУЮ</a>
+</header>
+
+<div class="hero">
+  <h1>СИСТЕМА РАНГОВ</h1>
+  <div class="subtitle">ПУТЬ ЧЁРНОГО ВОРОНА</div>
+  <p>Честь. Дисциплина. Единство.</p>
+</div>
+
+<section>
+  <h2>ВЕТКИ РАЗВИТИЯ</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>УЧАСТНИКИ</h3>
+      <p>100 рангов развития. Выполняй задания, получай метки и открывай новые звания.</p>
+    </div>
+
+    <div class="card">
+      <h3>МОДЕРАЦИЯ</h3>
+      <p>Отдельный путь для тех, кто выбирает работу с порядком и правилами сообщества.</p>
+    </div>
+
+    <div class="card">
+      <h3>АДМИНИСТРАЦИЯ</h3>
+      <p>Руководство, организация и развитие организации NOXIUM.</p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>СИСТЕМА МЕТОК</h2>
+  <p>Метки — показатель продвижения участника к следующему рангу. Выполняй задания и развивайся вместе с NOXIUM.</p>
+</section>
+
+<section>
+  <h2>ТВОЙ ПУТЬ НАЧИНАЕТСЯ ЗДЕСЬ</h2>
+  <p>Каждый участник может найти своё место в Ордене Чёрного Ворона.</p>
+  <a class="button" href="https://t.me/noxium73">ПЕРЕЙТИ В TELEGRAM</a>
+</section>
+
+<footer>
+  NOXIUM © 2026
+  <br><br>
+  ЧЕСТЬ. ДИСЦИПЛИНА. ЕДИНСТВО.
+</footer>
+
+</body>
+</html>
+
