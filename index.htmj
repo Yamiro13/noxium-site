@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOXIUM — Орден Чёрного Ворона</title>
+<meta name="description" content="NOXIUM — аниме-сообщество. Честь. Дисциплина. Единство. Присоединяйся к Ордену Чёрного Ворона.">
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #090909;
+  color: #eee;
+  font-family: Arial, sans-serif;
+}
+header {
+  padding: 22px 8%;
+  border-bottom: 1px solid #292929;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+nav a {
+  color: #aaa;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+nav a:hover { color: white; }
+.hero {
+  min-height: 570px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  background: radial-gradient(ellipse, #252525 0%, #090909 70%);
+}
+.raven { font-size: 85px; }
+h1 {
+  font-size: clamp(42px, 9vw, 75px);
+  letter-spacing: 12px;
+  margin: 15px 0;
+}
+.subtitle {
+  color: #aaa;
+  letter-spacing: 4px;
+  font-size: 13px;
+}
+.hero p {
+  color: #aaa;
+  max-width: 550px;
+  line-height: 1.8;
+}
+.button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 15px 30px;
+  border: 1px solid #aaa;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: .3s;
+}
+.button:hover {
+  background: white;
+  color: black;
+}
+section {
+  padding: 75px 10%;
+  text-align: center;
+}
+h2 {
+  font-size: 28px;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+section p {
+  color: #aaa;
+  line-height: 1.9;
+  max-width: 750px;
+  margin: auto;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px;
+  margin-top: 35px;
+}
+.card {
+  background: #141414;
+  border: 1px solid #303030;
+  padding: 30px 20px;
+}
+.card h3 { letter-spacing: 2px; }
+.card p { font-size: 14px; }
+footer {
+  border-top: 1px solid #292929;
+  text-align: center;
+  padding: 30px;
+  color: #777;
+  font-size: 12px;
+}
+@media(max-width:600px) {
+  header { flex-direction: column; gap: 18px; }
+  nav a { margin: 0 7px; }
+  h1 { letter-spacing: 5px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">NOXIUM</div>
+  <nav>
+    <a href="#about">О нас</a>
+    <a href="#ranks">Ранги</a>
+    <a href="#join">Вступление</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="raven">🐦‍⬛</div>
+  <h1>NOXIUM</h1>
+  <div class="subtitle">ОРДЕН ЧЁРНОГО ВОРОНА</div>
+  <p>Честь. Дисциплина. Единство.</p>
+  <p>Сообщество, объединённое общими интересами, уважением и стремлением к развитию.</p>
+  <a class="button" href="https://t.me/noxium73">ВСТУПИТЬ В ОРДЕН</a>
+</div>
+
+<section id="about">
+  <h2>О НАС</h2>
+  <p>
+    NOXIUM — сообщество любителей аниме.
+    Здесь каждый участник становится частью единого коллектива.
+    Нас объединяют общение, творчество, взаимное уважение
+    и собственная система званий.
+  </p>
+</section>
+
+<section id="ranks">
+  <h2>СИСТЕМА РАНГОВ</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>УЧАСТНИКИ</h3>
+      <p>Система развития, заданий и получения новых званий.</p>
+    </div>
+    <div class="card">
+      <h3>МОДЕРАЦИЯ</h3>
+      <p>Порядок, контроль и поддержание правил сообщества.</p>
+    </div>
+    <div class="card">
+      <h3>АДМИНИСТРАЦИЯ</h3>
+      <p>Руководство и организация жизни NOXIUM.</p>
+    </div>
+  </div>
+</section>
+
+<section id="join">
+  <h2>СТАНЬ ЧАСТЬЮ NOXIUM</h2>
+  <p>Вступай в Орден Чёрного Ворона и найди своё место среди нас.</p>
+  <a class="button" href="https://t.me/noxium73">ПЕРЕЙТИ В TELEGRAM</a>
+</section>
+
+<footer>
+  NOXIUM © 2026
+  <br><br>
+  ЧЕСТЬ. ДИСЦИПЛИНА. ЕДИНСТВО.
+</footer>
+
+</body>
+</html>
