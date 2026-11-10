@@ -4,35 +4,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>NOXIUM — Орден Чёрного Ворона</title>
-<meta name="description" content="NOXIUM — аниме-сообщество. Честь. Дисциплина. Единство. Присоединяйся к Ордену Чёрного Ворона.">
+<meta name="description" content="NOXIUM — аниме-сообщество. Честь. Дисциплина. Единство.">
+
 <style>
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  background: #090909;
+  background: #08060d;
   color: #eee;
   font-family: Arial, sans-serif;
 }
+
+/* ШАПКА */
+
 header {
   padding: 22px 8%;
-  border-bottom: 1px solid #292929;
+  background: #0c0912;
+  border-bottom: 1px solid #572b82;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .logo {
-  font-size: 25px;
+  font-size: 27px;
   font-weight: bold;
-  letter-spacing: 5px;
+  letter-spacing: 6px;
+  color: #c99aff;
+  text-shadow: 0 0 15px #812bd1;
 }
+
 nav a {
-  color: #aaa;
+  color: #b9a9c9;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 22px;
   font-size: 14px;
+  transition: .3s;
 }
-nav a:hover { color: white; }
+
+nav a:hover {
+  color: #d7a6ff;
+  text-shadow: 0 0 10px #a34cff;
+}
+
+/* ГЛАВНЫЙ ЭКРАН */
+
 .hero {
   min-height: 570px;
   display: flex;
@@ -41,88 +63,185 @@ nav a:hover { color: white; }
   align-items: center;
   text-align: center;
   padding: 60px 20px;
-  background: radial-gradient(ellipse, #252525 0%, #090909 70%);
+
+  background:
+    radial-gradient(ellipse at center,
+    #28123e 0%,
+    #130b1d 40%,
+    #08060d 75%);
 }
-.raven { font-size: 85px; }
+
+.raven {
+  font-size: 85px;
+  filter: drop-shadow(0 0 18px #9d4bdb);
+}
+
 h1 {
   font-size: clamp(42px, 9vw, 75px);
   letter-spacing: 12px;
   margin: 15px 0;
+  color: #eee0ff;
+  text-shadow: 0 0 25px #913be0;
 }
+
 .subtitle {
-  color: #aaa;
-  letter-spacing: 4px;
+  color: #c18aff;
+  letter-spacing: 5px;
   font-size: 13px;
 }
+
 .hero p {
-  color: #aaa;
+  color: #b9adca;
   max-width: 550px;
   line-height: 1.8;
 }
+
+/* КНОПКИ */
+
 .button {
   display: inline-block;
   margin-top: 25px;
   padding: 15px 30px;
-  border: 1px solid #aaa;
+  border: 1px solid #a75be8;
+  background: rgba(90, 30, 130, .12);
   color: white;
   text-decoration: none;
   letter-spacing: 2px;
   transition: .3s;
 }
+
 .button:hover {
-  background: white;
-  color: black;
+  background: #8136b5;
+  box-shadow: 0 0 25px #8439c7;
+  color: white;
 }
+
+/* РАЗДЕЛЫ */
+
 section {
-  padding: 75px 10%;
+  padding: 85px 10%;
   text-align: center;
 }
+
+section:nth-of-type(2) {
+  background: #0d0914;
+}
+
 h2 {
   font-size: 28px;
-  letter-spacing: 4px;
-  margin-bottom: 25px;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+  color: #d4a5ff;
+  text-shadow: 0 0 12px #6c269e;
 }
+
 section p {
-  color: #aaa;
+  color: #b9adca;
   line-height: 1.9;
   max-width: 750px;
   margin: auto;
 }
+
+/* КАРТОЧКИ */
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 18px;
-  margin-top: 35px;
+  gap: 22px;
+  margin-top: 40px;
 }
+
 .card {
-  background: #141414;
-  border: 1px solid #303030;
-  padding: 30px 20px;
+  background: linear-gradient(145deg, #191021, #100b17);
+  border: 1px solid #572b82;
+  padding: 35px 20px;
+  transition: .3s;
 }
-.card h3 { letter-spacing: 2px; }
-.card p { font-size: 14px; }
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #bd78f5;
+  box-shadow: 0 0 22px rgba(151, 66, 213, .2);
+}
+
+.card h3 {
+  letter-spacing: 2px;
+  color: #d4a5ff;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+/* ПРИСОЕДИНЕНИЕ */
+
+#join {
+  background:
+    radial-gradient(ellipse at center,
+    #241132 0%,
+    #08060d 75%);
+}
+
+/* ПОДВАЛ */
+
 footer {
-  border-top: 1px solid #292929;
+  border-top: 1px solid #572b82;
   text-align: center;
-  padding: 30px;
-  color: #777;
+  padding: 35px;
+  color: #8e7c9e;
   font-size: 12px;
+  letter-spacing: 2px;
 }
-@media(max-width:600px) {
-  header { flex-direction: column; gap: 18px; }
-  nav a { margin: 0 7px; }
-  h1 { letter-spacing: 5px; }
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+
+@media(max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    margin: 0 5px;
+  }
+
+  h1 {
+    letter-spacing: 5px;
+  }
+
+  .subtitle {
+    letter-spacing: 3px;
+  }
+
+  section {
+    padding: 65px 7%;
+  }
 }
 </style>
 </head>
-<body> <img
+
+<body>
+
+<!-- БАННЕР NOXIUM -->
+
+<img
   src="a_dark_gothic_anime_style_emblem_website_banner_f.png"
   alt="NOXIUM"
   style="display:block;width:100%;max-width:1100px;height:auto;margin:20px auto;"
 >
 
+<!-- НАВИГАЦИЯ -->
+
 <header>
   <div class="logo">NOXIUM</div>
+
   <nav>
     <a href="#about">О нас</a>
     <a href="#ranks">Ранги</a>
@@ -130,48 +249,94 @@ footer {
   </nav>
 </header>
 
+<!-- ГЛАВНЫЙ ЭКРАН -->
+
 <div class="hero">
   <div class="raven">🐦‍⬛</div>
+
   <h1>NOXIUM</h1>
-  <div class="subtitle">ОРДЕН ЧЁРНОГО ВОРОНА</div>
-  <p>Честь. Дисциплина. Единство.</p>
-  <p>Сообщество, объединённое общими интересами, уважением и стремлением к развитию.</p>
-  <a class="button" href="https://t.me/noxium73">ВСТУПИТЬ В ОРДЕН</a>
+
+  <div class="subtitle">
+    ОРДЕН ЧЁРНОГО ВОРОНА
+  </div>
+
+  <p><strong>Честь. Дисциплина. Единство.</strong></p>
+
+  <p>
+    Сообщество, объединённое общими интересами,
+    уважением и стремлением к развитию.
+  </p>
+
+  <a class="button" href="https://t.me/noxium73">
+    ВСТУПИТЬ В ОРДЕН
+  </a>
 </div>
+
+<!-- О НАС -->
 
 <section id="about">
   <h2>О НАС</h2>
+
   <p>
     NOXIUM — сообщество любителей аниме.
-    Здесь каждый участник становится частью единого коллектива.
-    Нас объединяют общение, творчество, взаимное уважение
-    и собственная система званий.
+    Здесь каждый участник становится частью
+    единого коллектива.
+
+    Нас объединяют общение, творчество,
+    взаимное уважение и собственная система званий.
   </p>
 </section>
 
+<!-- РАНГИ -->
+
 <section id="ranks">
   <h2>СИСТЕМА РАНГОВ</h2>
+
   <div class="cards">
+
     <div class="card">
       <h3>УЧАСТНИКИ</h3>
-      <p>Система развития, заданий и получения новых званий.</p>
+      <p>
+        Система развития, заданий
+        и получения новых званий.
+      </p>
     </div>
+
     <div class="card">
       <h3>МОДЕРАЦИЯ</h3>
-      <p>Порядок, контроль и поддержание правил сообщества.</p>
+      <p>
+        Порядок, контроль и поддержание
+        правил сообщества.
+      </p>
     </div>
+
     <div class="card">
       <h3>АДМИНИСТРАЦИЯ</h3>
-      <p>Руководство и организация жизни NOXIUM.</p>
+      <p>
+        Руководство и организация
+        жизни NOXIUM.
+      </p>
     </div>
+
   </div>
 </section>
 
+<!-- ВСТУПЛЕНИЕ -->
+
 <section id="join">
   <h2>СТАНЬ ЧАСТЬЮ NOXIUM</h2>
-  <p>Вступай в Орден Чёрного Ворона и найди своё место среди нас.</p>
-  <a class="button" href="https://t.me/noxium73">ПЕРЕЙТИ В TELEGRAM</a>
+
+  <p>
+    Вступай в Орден Чёрного Ворона
+    и найди своё место среди нас.
+  </p>
+
+  <a class="button" href="https://t.me/noxium73">
+    ПЕРЕЙТИ В TELEGRAM
+  </a>
 </section>
+
+<!-- ПОДВАЛ -->
 
 <footer>
   NOXIUM © 2026
