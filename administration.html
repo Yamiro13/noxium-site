@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOXIUM — Администрация</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #08060d;
+  color: #eee;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 22px 7%;
+  background: #0c0912;
+  border-bottom: 1px solid #572b82;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #c99aff;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-shadow: 0 0 15px #812bd1;
+}
+
+header a {
+  color: #c99aff;
+  text-decoration: none;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 45px 20px 80px;
+}
+
+h1 {
+  text-align: center;
+  color: #d4a5ff;
+  letter-spacing: 5px;
+  text-shadow: 0 0 15px #8136b5;
+}
+
+.subtitle {
+  text-align: center;
+  color: #9685a7;
+  margin-bottom: 45px;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+/* ВЛАДЕЛЕЦ */
+
+.owner {
+  background: linear-gradient(145deg, #260d16, #100b17);
+  border: 2px solid #e52d4c;
+  box-shadow: 0 0 25px #9e173c55;
+  padding: 35px 20px;
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.owner .avatar {
+  width: 115px;
+  height: 115px;
+  margin: auto;
+  border: 2px solid #ff405c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+  background: #170912;
+  box-shadow: 0 0 25px #e52d4c;
+}
+
+.owner h2 {
+  color: #ff526b;
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+}
+
+.owner .rank {
+  color: #ff8a9c;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.owner p {
+  color: #c9b5bd;
+  line-height: 1.8;
+}
+
+/* АДМИНИСТРАЦИЯ */
+
+.section-title {
+  text-align: center;
+  color: #d4a5ff;
+  letter-spacing: 4px;
+  margin: 40px 0 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(145deg, #191021, #100b17);
+  border: 1px solid #8136b5;
+  padding: 25px 15px;
+  text-align: center;
+  transition: .3s;
+  box-shadow: 0 0 12px #8136b522;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #d4a5ff;
+  box-shadow: 0 0 22px #963cff55;
+}
+
+.avatar {
+  width: 75px;
+  height: 75px;
+  margin: auto;
+  border: 1px solid #a75be8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #d4a5ff;
+  background: #21132d;
+}
+
+.card h3 {
+  color: #d4a5ff;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.code {
+  display: inline-block;
+  color: #dcb8ff;
+  border: 1px solid #963cff;
+  padding: 5px 13px;
+  margin: 5px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.card p {
+  color: #a99bb5;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid #572b82;
+  color: #8e7c9e;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+@media(max-width: 500px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .card {
+    padding: 20px 8px;
+  }
+
+  .card h3 {
+    font-size: 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">NOXIUM</div>
+  <a href="index.html">← ГЛАВНАЯ</a>
+</header>
+
+<main>
+
+<h1>АДМИНИСТРАЦИЯ</h1>
+<div class="subtitle">РУКОВОДСТВО ОРДЕНА ЧЁРНОГО ВОРОНА</div>
+
+<!-- ВЛАДЕЛЕЦ -->
+
+<div class="owner">
+  <div class="avatar">🐦‍⬛</div>
+  <h2>СОН ДЖИН ВУ</h2>
+  <div class="rank">EX — ВЛАДЕЛЕЦ</div>
+
+  <p>
+    Основатель и владелец NOXIUM.<br>
+    Отвечает за развитие, устройство
+    и будущее Ордена.
+  </p>
+
+  <p>
+    Интересы: игры, кулинария, дизайн.
+  </p>
+</div>
+
+<h2 class="section-title">РУКОВОДСТВО</h2>
+
+<div class="cards">
+
+  <div class="card">
+    <div class="avatar">R</div>
+    <h3>РУДИУС</h3>
+    <span class="code">VAD</span>
+    <p>Верховный администратор</p>
+  </div>
+
+  <div class="card">
+    <div class="avatar">S</div>
+    <h3>САКУРА</h3>
+    <span class="code">SEC</span>
+    <p>Секретарь владельца</p>
+  </div>
+
+  <div class="card">
+    <div class="avatar">H</div>
+    <h3>ГЛАВА МОДЕРАЦИИ</h3>
+    <span class="code">HMO</span>
+    <p>Главный администратор модерации</p>
+  </div>
+
+  <div class="card">
+    <div class="avatar">H</div>
+    <h3>ГЛАВА РЕКРУТИНГА</h3>
+    <span class="code">HRC</span>
+    <p>Главный администратор рекрутинга</p>
+  </div>
+
+  <div class="card">
+    <div class="avatar">H</div>
+    <h3>ГЛАВА ТВОРЧЕСТВА</h3>
+    <span class="code">HCR</span>
+    <p>Главный администратор творческого отдела</p>
+  </div>
+
+</div>
+
+<h2 class="section-title">ОТДЕЛЫ И АДМИНИСТРАТОРЫ</h2>
+
+<div class="cards">
+
+  <div class="card">
+    <div class="avatar">D</div>
+    <h3>ДИЗАЙНЕР</h3>
+    <span class="code">DSN</span>
+    <p>Создание графики и оформления</p>
+    <p>Количество: 1</p>
+  </div>
+
+  <div class="card">
+    <div class="avatar">E</div>
+    <h3>МОНТАЖЁР</h3>
+    <span class="code">EDT</span>
+    <p>Монтаж видеоматериалов</p>
+    <p>Количество: 1</p>
+  </div>
+
+  <div class="card">
+    <div class="avatar">M</div>
+    <h3>МЕДИА-АДМИНИСТРАТОР</h3>
+    <span class="code">MED</span>
+    <p>Работа с медиа и публикациями</p>
+    <p>Количество: 1</p>
+  </div>
+
+  <div class="card">
+    <div class="avatar">M</div>
+    <h3>МОДЕРАТОР</h3>
+    <span class="code">MOD</span>
+    <p>Контроль порядка в сообществе</p>
+    <p>Количество: 5</p>
+  </div>
+
+  <div class="card">
+    <div class="avatar">S</div>
+    <h3>ПОДДЕРЖКА</h3>
+    <span class="code">SUP</span>
+    <p>Помощь участникам</p>
+    <p>Количество: 1</p>
+  </div>
+
+  <div class="card">
+    <div class="avatar">I</div>
+    <h3>ИНСПЕКТОР</h3>
+    <span class="code">INS</span>
+    <p>Проверка соблюдения порядка</p>
+    <p>Количество: 1</p>
+  </div>
+
+  <div class="card">
+    <div class="avatar">R</div>
+    <h3>РЕКРУТЕР</h3>
+    <span class="code">REC</span>
+    <p>Привлечение новых участников</p>
+    <p>Количество: 3</p>
+  </div>
+
+  <div class="card">
+    <div class="avatar">R</div>
+    <h3>ПРОВЕРЯЮЩИЙ АНКЕТЫ</h3>
+    <span class="code">REV</span>
+    <p>Проверка заявок на вступление</p>
+    <p>Количество: 2</p>
+  </div>
+
+  <div class="card">
+    <div class="avatar">O</div>
+    <h3>ОРГАНИЗАТОР</h3>
+    <span class="code">ORG</span>
+    <p>Организация деятельности NOXIUM</p>
+    <p>Количество: 1</p>
+  </div>
+
+  <div class="card">
+    <div class="avatar">C</div>
+    <h3>КООРДИНАТОР</h3>
+    <span class="code">COR</span>
+    <p>Координация работы администрации</p>
+    <p>Количество: 2</p>
+  </div>
+
+</div>
+
+</main>
+
+<footer>
+NOXIUM © 2026
+<br><br>
+ЧЕСТЬ. ДИСЦИПЛИНА. ЕДИНСТВО.
+</footer>
+
+</body>
+</html>
