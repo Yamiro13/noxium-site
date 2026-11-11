@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NOXIUM — Система рангов</title>
+<title>NOXIUM — Ранговая система</title>
 
 <style>
 * {
@@ -20,7 +20,7 @@ body {
 }
 
 header {
-  padding: 22px 8%;
+  padding: 20px 7%;
   background: #0c0912;
   border-bottom: 1px solid #743ba5;
   display: flex;
@@ -35,21 +35,21 @@ header {
   letter-spacing: 5px;
 }
 
-header a {
+a {
   color: #c99aff;
   text-decoration: none;
 }
 
 .hero {
   text-align: center;
-  padding: 75px 20px;
+  padding: 65px 15px;
   background: radial-gradient(ellipse, #28123e, #08060d 75%);
 }
 
 h1 {
   color: #e7caff;
   letter-spacing: 5px;
-  font-size: clamp(28px, 7vw, 52px);
+  font-size: clamp(27px, 6vw, 48px);
   text-shadow: 0 0 20px #913be0;
 }
 
@@ -59,119 +59,179 @@ h1 {
 }
 
 section {
-  padding: 50px 8%;
-  text-align: center;
+  padding: 35px 7%;
 }
 
 h2 {
   color: #d4a5ff;
   letter-spacing: 3px;
+  text-align: center;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.card {
-  padding: 25px 20px;
-  background: #160e20;
-  border: 1px solid #67378e;
-  transition: .3s;
-}
-
-.card:hover {
-  border-color: #c18aff;
-  box-shadow: 0 0 20px #55247a;
-  transform: translateY(-4px);
-}
-
-.card h3 {
-  color: #d4a5ff;
-  letter-spacing: 2px;
-}
-
-.card p {
+.intro {
+  text-align: center;
   color: #b9adca;
   line-height: 1.7;
-  font-size: 14px;
 }
 
-.rank-number {
-  color: #b77bea;
-  font-size: 13px;
-  letter-spacing: 2px;
-}
-
-.rank-code {
-  font-size: 30px;
-  color: #e2c2ff;
-  font-weight: bold;
-  margin: 12px 0;
-}
-
-.rank-name {
-  color: #fff;
-  font-size: 17px;
-}
-
-.rank-info {
-  color: #a99ab8;
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-.highlight {
-  border-color: #a75be8;
-  box-shadow: 0 0 15px #55247a;
-}
-
-.mark-list {
+.navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   margin: 25px 0;
 }
 
-.mark {
-  width: 25px;
-  height: 25px;
-  border: 1px solid #a75be8;
-  transform: rotate(45deg);
-  background: #261333;
-}
-
-.admin {
-  border-left: 3px solid #a75be8;
-  text-align: left;
-  padding: 18px;
-  margin: 12px auto;
-  max-width: 650px;
+.navigation a {
+  padding: 11px 17px;
+  border: 1px solid #67378e;
   background: #160e20;
+  font-size: 13px;
 }
 
-.admin strong {
+.navigation a:hover {
+  background: #55247a;
+}
+
+.search-box {
+  display: block;
+  width: 100%;
+  max-width: 550px;
+  margin: 25px auto;
+  padding: 15px;
+  background: #160e20;
+  border: 1px solid #743ba5;
+  color: white;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-box:focus {
+  border-color: #c99aff;
+}
+
+.count {
+  text-align: center;
+  color: #a98abf;
+  margin: 15px;
+}
+
+.rank-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.rank-card {
+  padding: 18px;
+  background: #160e20;
+  border: 1px solid #67378e;
+  transition: .2s;
+}
+
+.rank-card:hover {
+  border-color: #c18aff;
+  box-shadow: 0 0 15px #55247a;
+  transform: translateY(-3px);
+}
+
+.rank-number {
+  color: #9673b0;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.rank-code {
+  color: #e2c2ff;
+  font-size: 27px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.rank-name {
+  color: #eee;
+  font-size: 15px;
+}
+
+details {
+  margin: 15px 0;
+  background: #100b17;
+  border: 1px solid #67378e;
+}
+
+summary {
+  cursor: pointer;
+  padding: 19px;
   color: #d4a5ff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  list-style-position: inside;
 }
 
-.admin p {
-  color: #b9adca;
+summary:hover {
+  background: #21132e;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  padding: 15px;
+}
+
+.admin-card {
+  padding: 16px;
+  background: #1a1024;
+  border: 1px solid #54316f;
+}
+
+.admin-card strong {
+  display: block;
+  color: #d4a5ff;
+  font-size: 21px;
+  margin-bottom: 9px;
+}
+
+.admin-card span {
+  color: #ddd;
   font-size: 14px;
 }
 
-.button {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 13px 25px;
-  color: white;
-  text-decoration: none;
-  border: 1px solid #a75be8;
+.mark-box {
+  max-width: 600px;
+  margin: 25px auto;
+  padding: 25px;
+  text-align: center;
+  background: #160e20;
+  border: 1px solid #67378e;
 }
 
-.button:hover {
-  background: #8136b5;
+.marks {
+  display: flex;
+  justify-content: center;
+  gap: 13px;
+  margin: 25px 0;
+}
+
+.mark {
+  width: 20px;
+  height: 20px;
+  background: #8e4ac0;
+  transform: rotate(45deg);
+  box-shadow: 0 0 10px #8e4ac0;
+}
+
+.mark-text {
+  color: #c99aff;
+  font-weight: bold;
+}
+
+.empty {
+  text-align: center;
+  color: #a98abf;
+  padding: 25px;
+  display: none;
 }
 
 footer {
@@ -179,6 +239,7 @@ footer {
   padding: 30px;
   color: #8e7c9e;
   border-top: 1px solid #572b82;
+  margin-top: 40px;
 }
 
 @media(max-width:600px) {
@@ -204,111 +265,71 @@ footer {
 </div>
 
 <section>
-  <h2>ВЕТКИ РАЗВИТИЯ</h2>
+  <h2>РАНГОВАЯ СИСТЕМА NOXIUM</h2>
+  <p class="intro">
+    Здесь представлены все ступени развития участников
+    и административного состава Ордена Чёрного Ворона.
+  </p>
 
-  <div class="cards">
-    <div class="card">
-      <h3>УЧАСТНИКИ</h3>
-      <p>100 рангов развития. Выполняй задания, получай метки и продвигайся вперёд.</p>
-    </div>
-
-    <div class="card">
-      <h3>МОДЕРАЦИЯ</h3>
-      <p>Отдельная ветка из 10 рангов для участников, выбравших путь модератора.</p>
-    </div>
-
-    <div class="card">
-      <h3>АДМИНИСТРАЦИЯ</h3>
-      <p>Руководство, организация и развитие сообщества NOXIUM.</p>
-    </div>
+  <div class="navigation">
+    <a href="#participants">УЧАСТНИКИ</a>
+    <a href="#administration">АДМИНИСТРАЦИЯ</a>
+    <a href="#marks">СИСТЕМА МЕТОК</a>
   </div>
+
+  <input
+    class="search-box"
+    id="search"
+    type="text"
+    placeholder="Поиск по коду или названию ранга..."
+  >
+
+  <div class="count" id="count"></div>
 </section>
 
-<section>
-  <h2>РАНГИ УЧАСТНИКОВ</h2>
-  <p>Путь участника состоит из 100 последовательных рангов.</p>
+<section id="participants">
+  <h2>100 РАНГОВ УЧАСТНИКОВ</h2>
+  <p class="intro">
+    Путь участника NOXIUM состоит из 100 последовательных ступеней.
+  </p>
 
-  <div class="cards">
-    <div class="card highlight">
-      <div class="rank-number">РАНГ 01 / 100</div>
-      <div class="rank-code">IN</div>
-      <div class="rank-name">Посвящённый</div>
-      <p>Начальная ступень участника NOXIUM.</p>
-    </div>
-
-    <div class="card">
-      <div class="rank-number">РАНГИ 02–100</div>
-      <div class="rank-code">???</div>
-      <div class="rank-name">Следующие ступени</div>
-      <p>Названия и коды будут добавлены согласно утверждённой таблице рангов.</p>
-    </div>
-  </div>
+  <div class="rank-grid" id="participantRanks"></div>
 </section>
 
-<section>
+<section id="marks">
   <h2>СИСТЕМА МЕТОК</h2>
-  <p>Метки — показатель продвижения участника к следующему рангу.</p>
 
-  <div class="mark-list">
-    <div class="mark"></div>
-    <div class="mark"></div>
-    <div class="mark"></div>
-    <div class="mark"></div>
-    <div class="mark"></div>
-  </div>
+  <div class="mark-box">
+    <p>Метки показывают продвижение участника к следующему рангу.</p>
 
-  <h3 style="color:#d4a5ff;">5 МЕТОК</h3>
-  <p>Пять меток — необходимое количество для перехода на следующую ступень.</p>
-</section>
+    <div class="marks">
+      <div class="mark"></div>
+      <div class="mark"></div>
+      <div class="mark"></div>
+      <div class="mark"></div>
+      <div class="mark"></div>
+    </div>
 
-<section>
-  <h2>ВЕТКА МОДЕРАЦИИ</h2>
+    <div class="mark-text">5 МЕТОК = СЛЕДУЮЩИЙ РАНГ</div>
 
-  <div class="card">
-    <h3>10 РАНГОВ</h3>
-    <p>Отдельная система продвижения для модераторской ветки.</p>
-    <p>Коды состоят из трёх букв. Выбор модераторского пути после достижения установленного порога необратим.</p>
+    <p>Выполняй задания, получай метки и продвигайся по системе NOXIUM.</p>
   </div>
 </section>
 
-<section>
-  <h2>АДМИНИСТРАЦИЯ NOXIUM</h2>
+<section id="administration">
+  <h2>АДМИНИСТРАТИВНАЯ СИСТЕМА</h2>
+  <p class="intro">
+    Административные направления имеют собственные
+    последовательности из десяти ступеней.
+  </p>
 
-  <div class="admin">
-    <strong>VAD — Верховный администратор</strong>
-    <p>Высшее руководство NOXIUM.</p>
-  </div>
-
-  <div class="admin">
-    <strong>HMO — Главный администратор модерации</strong>
-    <p>Руководство модераторским составом.</p>
-  </div>
-
-  <div class="admin">
-    <strong>HRC — Главный администратор рекрутинга</strong>
-    <p>Руководство набором новых участников.</p>
-  </div>
-
-  <div class="admin">
-    <strong>HCR — Главный администратор творческого отдела</strong>
-    <p>Руководство творческим направлением.</p>
-  </div>
-
-  <div class="admin">
-    <strong>DSN — Администратор дизайна</strong>
-    <p>Ответственный за визуальное оформление.</p>
-  </div>
-
-  <div class="admin">
-    <strong>Другие должности</strong>
-    <p>Инспектор, организатор, проверяющие анкет, рекрутеры, сценарист и медиасостав.</p>
-  </div>
+  <div id="adminGroups"></div>
 </section>
 
-<section>
-  <h2>ТВОЙ ПУТЬ НАЧИНАЕТСЯ ЗДЕСЬ</h2>
-  <p>Каждый участник может найти своё место в Ордене Чёрного Ворона.</p>
-  <a class="button" href="https://t.me/noxium73">ПЕРЕЙТИ В TELEGRAM</a>
+<section style="text-align:center">
+  <h2>ОРДЕН ЧЁРНОГО ВОРОНА</h2>
+  <p class="intro">Твой путь в NOXIUM начинается здесь.</p>
+  <a href="https://t.me/noxium73">ПЕРЕЙТИ В TELEGRAM</a>
 </section>
 
 <footer>
@@ -316,6 +337,484 @@ footer {
   <br><br>
   ЧЕСТЬ. ДИСЦИПЛИНА. ЕДИНСТВО.
 </footer>
+
+<script>
+
+// 100 РАНГОВ УЧАСТНИКОВ
+
+const participantData = `
+IN|Посвящённый
+IF|Новичок
+IR|Ученик
+IS|Последователь
+IA|Принятый
+FN|Знакомый
+FF|Сторонник
+FR|Участник
+FS|Проверенный
+FA|Надёжный
+RN|Свой
+RF|Постоянный
+RR|Активный
+RS|Приверженец
+RA|Сотрудник
+SN|Единомышленник
+SF|Помощник
+SR|Защитник
+SS|Хранитель
+SA|Опора
+AN|Старожил
+AF|Ветеран
+AR|Заслуженный
+AS|Почётный
+AA|Уважаемый
+BN|Наставник
+BF|Советник
+BR|Проводник
+BS|Страж
+BA|Опекун
+CN|Хранитель порядка
+CF|Верный соратник
+CR|Испытанный
+CS|Преданный
+CA|Надёжная опора
+DN|Старший участник
+DF|Старший соратник
+DR|Старший хранитель
+DS|Старший страж
+DA|Старший ветеран
+EN|Авторитет
+EF|Почётный ветеран
+ER|Мудрый соратник
+ES|Признанный
+EA|Избранный
+GN|Заслуженный хранитель
+GF|Защитник ордена
+GR|Столп NOXIUM
+GS|Хранитель наследия
+GA|Легенда сообщества
+HN|Старший наставник
+HF|Мастер порядка
+HR|Мастер единства
+HS|Мастер традиций
+HA|Мастер ордена
+JN|Почётный защитник
+JF|Великий хранитель
+JR|Великий страж
+JS|Великий соратник
+JA|Великий ветеран
+KN|Советник ордена
+KF|Старший советник
+KR|Хранитель чести
+KS|Хранитель единства
+KA|Хранитель традиций
+LN|Страж наследия
+LF|Страж чести
+LR|Страж единства
+LS|Страж ордена
+LA|Почётный страж
+MN|Избранный хранитель
+MF|Избранный защитник
+MR|Избранный ветеран
+MS|Избранный страж
+MA|Избранный соратник
+NN|Верховный ветеран
+NF|Верховный хранитель
+NR|Верховный защитник
+NS|Верховный страж
+NA|Верховный соратник
+PN|Легендарный участник
+PF|Легендарный ветеран
+PR|Легендарный защитник
+PS|Легендарный хранитель
+PA|Легенда ордена
+QN|Элитный хранитель
+QF|Элитный защитник
+QR|Элитный страж
+QS|Элитный ветеран
+QA|Элитный соратник
+TN|Великая легенда
+TF|Символ единства
+TR|Душа ордена
+TS|Наследие NOXIUM
+TA|Гордость NOXIUM
+VN|Бессмертная легенда
+VF|Вершина ордена
+VR|Высшее наследие
+VS|Вечный хранитель
+VA|Легенда NOXIUM
+`.trim();
+
+// АДМИНИСТРАТИВНЫЕ НАПРАВЛЕНИЯ
+
+const adminData = [
+{
+title: "Верховный администратор (VAD)",
+ranks: `
+VAA|Кандидат руководства
+VAB|Помощник администрации
+VAC|Младший администратор
+VAD|Администратор
+VAE|Старший администратор
+VAF|Главный администратор
+VAG|Руководитель администрации
+VAH|Заместитель верховного администратора
+VAI|Верховный советник
+VAJ|Верховный администратор
+`
+},
+{
+title: "Главный администратор модерации (HMO)",
+ranks: `
+MAA|Стажёр модерации
+MAB|Помощник модерации
+MAC|Младший модератор
+MAD|Модератор
+MAE|Старший модератор
+MAF|Главный страж
+MAG|Инспектор порядка
+MAH|Старший инспектор
+MAI|Руководитель модерации
+MAJ|Глава модерации
+`
+},
+{
+title: "Модератор (MOD)",
+ranks: `
+MOA|Кандидат модерации
+MOB|Помощник стража
+MOC|Младший страж
+MOD|Страж порядка
+MOE|Старший страж
+MOF|Защитник сообщества
+MOG|Хранитель порядка
+MOH|Старший хранитель
+MOI|Ведущий модератор
+MOJ|Почётный модератор
+`
+},
+{
+title: "Главный администратор рекрутинга (HRC)",
+ranks: `
+RAA|Стажёр рекрутинга
+RAB|Помощник рекрутера
+RAC|Младший рекрутер
+RAD|Рекрутер
+RAE|Старший рекрутер
+RAF|Специалист по отбору
+RAG|Руководитель набора
+RAH|Старший руководитель набора
+RAI|Заместитель главы рекрутинга
+RAJ|Глава рекрутинга
+`
+},
+{
+title: "Рекрутер (REC)",
+ranks: `
+QAA|Кандидат рекрутинга
+QAB|Помощник по набору
+QAC|Младший вербовщик
+QAD|Рекрутер
+QAE|Опытный рекрутер
+QAF|Специалист набора
+QAG|Старший специалист
+QAH|Наставник рекрутеров
+QAI|Ведущий рекрутер
+QAJ|Почётный рекрутер
+`
+},
+{
+title: "Проверяющий анкет (REV)",
+ranks: `
+EVA|Кандидат проверки
+EVB|Помощник проверяющего
+EVC|Младший проверяющий
+EVD|Проверяющий анкет
+EVE|Старший проверяющий
+EVF|Специалист отбора
+EVG|Эксперт проверки
+EVH|Старший эксперт
+EVI|Руководитель проверки
+EVJ|Главный проверяющий
+`
+},
+{
+title: "Главный администратор творчества (HCR)",
+ranks: `
+CAA|Творческий стажёр
+CAB|Помощник создателя
+CAC|Младший творец
+CAD|Создатель контента
+CAE|Старший создатель
+CAF|Мастер творчества
+CAG|Ведущий специалист
+CAH|Куратор творчества
+CAI|Заместитель главы творчества
+CAJ|Глава творчества
+`
+},
+{
+title: "Дизайнер (DSN)",
+ranks: `
+DSA|Начинающий дизайнер
+DSB|Помощник дизайнера
+DSC|Младший дизайнер
+DSD|Дизайнер
+DSE|Опытный дизайнер
+DSF|Старший дизайнер
+DSG|Мастер дизайна
+DSH|Ведущий дизайнер
+DSI|Главный дизайнер
+DSJ|Мастер оформления
+`
+},
+{
+title: "Монтажёр (EDT)",
+ranks: `
+EDA|Начинающий монтажёр
+EDB|Помощник монтажёра
+EDC|Младший монтажёр
+EDD|Монтажёр
+EDE|Опытный монтажёр
+EDF|Старший монтажёр
+EDG|Мастер монтажа
+EDH|Ведущий монтажёр
+EDI|Главный монтажёр
+EDJ|Мастер видеопроизводства
+`
+},
+{
+title: "Сценарист (SCR)",
+ranks: `
+SCA|Начинающий сценарист
+SCB|Помощник сценариста
+SCC|Младший сценарист
+SCD|Сценарист
+SCE|Опытный сценарист
+SCF|Старший сценарист
+SCG|Мастер сюжетов
+SCH|Ведущий сценарист
+SCI|Главный сценарист
+SCJ|Мастер повествования
+`
+},
+{
+title: "Художник (ART)",
+ranks: `
+ARA|Начинающий художник
+ARB|Помощник художника
+ARC|Младший художник
+ARD|Художник
+ARE|Опытный художник
+ARF|Старший художник
+ARG|Мастер иллюстрации
+ARH|Ведущий художник
+ARI|Главный художник
+ARJ|Мастер искусства
+`
+},
+{
+title: "Редактор (RED)",
+ranks: `
+REA|Начинающий редактор
+REB|Помощник редактора
+REC|Младший редактор
+RED|Редактор
+REE|Опытный редактор
+REF|Старший редактор
+REG|Мастер текста
+REH|Ведущий редактор
+REI|Главный редактор
+REJ|Хранитель слова
+`
+},
+{
+title: "Медиа-администратор (MED)",
+ranks: `
+MEA|Медиастажёр
+MEB|Помощник медиаспециалиста
+MEC|Младший медиаспециалист
+MED|Медиаспециалист
+MEE|Опытный медиаспециалист
+MEF|Старший медиаспециалист
+MEG|Мастер медиа
+MEH|Ведущий медиаспециалист
+MEI|Главный медиаспециалист
+MEJ|Глава медиа
+`
+},
+{
+title: "Администратор поддержки (SUP)",
+ranks: `
+SUA|Стажёр поддержки
+SUB|Помощник поддержки
+SUC|Младший консультант
+SUD|Специалист поддержки
+SUE|Старший консультант
+SUF|Решатель обращений
+SUG|Эксперт поддержки
+SUH|Куратор поддержки
+SUI|Руководитель поддержки
+SUJ|Глава поддержки
+`
+},
+{
+title: "Следователь / инспектор (INS)",
+ranks: `
+INA|Кандидат инспекции
+INB|Помощник инспектора
+INC|Младший инспектор
+IND|Инспектор
+INE|Старший инспектор
+INF|Контролёр администрации
+ING|Старший контролёр
+INH|Главный контролёр
+INI|Верховный проверяющий
+INJ|Глава инспекции
+`
+},
+{
+title: "Организатор (ORG)",
+ranks: `
+ORA|Стажёр организации
+ORB|Помощник организатора
+ORC|Младший организатор
+ORD|Организатор
+ORE|Старший организатор
+ORF|Координатор событий
+ORG|Мастер мероприятий
+ORH|Руководитель мероприятий
+ORI|Заместитель главы организации
+ORJ|Глава организации
+`
+},
+{
+title: "Секретарь (SEC)",
+ranks: `
+SEA|Стажёр секретариата
+SEB|Помощник секретаря
+SEC|Младший секретарь
+SED|Секретарь
+SEE|Старший секретарь
+SEF|Личный координатор
+SEG|Старший координатор
+SEH|Управляющий секретариатом
+SEI|Заместитель главы секретариата
+SEJ|Глава секретариата
+`
+},
+{
+title: "Координатор (COR)",
+ranks: `
+COA|Стажёр координации
+COB|Помощник координатора
+COC|Младший координатор
+COD|Координатор
+COE|Старший координатор
+COF|Управляющий процессами
+COG|Старший управляющий
+COH|Главный координатор
+COI|Заместитель главы координации
+COJ|Глава координации
+`
+}
+];
+
+// ПРЕОБРАЗОВАНИЕ СПИСКОВ
+
+function parseRanks(data) {
+  return data.trim().split("\n").map(line => {
+    const [code, name] = line.split("|");
+    return {code, name};
+  });
+}
+
+// ОТОБРАЖЕНИЕ РАНГОВ УЧАСТНИКОВ
+
+const participantRanks = parseRanks(participantData);
+const participantContainer = document.getElementById("participantRanks");
+
+participantRanks.forEach((rank, index) => {
+  const card = document.createElement("div");
+  card.className = "rank-card searchable";
+  card.dataset.search = (rank.code + " " + rank.name).toLowerCase();
+
+  card.innerHTML = `
+    <div class="rank-number">РАНГ ${String(index + 1).padStart(2, "0")} / 100</div>
+    <div class="rank-code">${rank.code}</div>
+    <div class="rank-name">${rank.name}</div>
+  `;
+
+  participantContainer.appendChild(card);
+});
+
+// ОТОБРАЖЕНИЕ АДМИНИСТРАТИВНЫХ НАПРАВЛЕНИЙ
+
+const adminContainer = document.getElementById("adminGroups");
+
+adminData.forEach((group, index) => {
+  const ranks = parseRanks(group.ranks);
+
+  const details = document.createElement("details");
+  details.className = "admin-group";
+
+  const summary = document.createElement("summary");
+  summary.textContent = `${String(index + 1).padStart(2, "0")}. ${group.title}`;
+
+  details.appendChild(summary);
+
+  const grid = document.createElement("div");
+  grid.className = "admin-grid";
+
+  ranks.forEach((rank, rankIndex) => {
+    const card = document.createElement("div");
+    card.className = "admin-card searchable";
+    card.dataset.search = (
+      rank.code + " " + rank.name + " " + group.title
+    ).toLowerCase();
+
+    card.innerHTML = `
+      <div class="rank-number">СТУПЕНЬ ${String(rankIndex + 1).padStart(2, "0")} / 10</div>
+      <strong>${rank.code}</strong>
+      <span>${rank.name}</span>
+    `;
+
+    grid.appendChild(card);
+  });
+
+  details.appendChild(grid);
+  adminContainer.appendChild(details);
+});
+
+// ПОИСК
+
+const search = document.getElementById("search");
+const count = document.getElementById("count");
+
+function updateSearch() {
+  const query = search.value.trim().toLowerCase();
+  const cards = document.querySelectorAll(".searchable");
+  let visible = 0;
+
+  cards.forEach(card => {
+    const match = card.dataset.search.includes(query);
+    card.style.display = match ? "" : "none";
+
+    if (match) visible++;
+
+    if (match && card.closest("details")) {
+      card.closest("details").open = true;
+    }
+  });
+
+  count.textContent = query
+    ? `Найдено рангов: ${visible}`
+    : `100 рангов участников • ${adminData.length} административных направлений`;
+}
+
+search.addEventListener("input", updateSearch);
+
+</script>
 
 </body>
 </html>
