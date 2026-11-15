@@ -61,55 +61,18 @@ h1 {
   font-size: 12px;
 }
 
-/* ВЛАДЕЛЕЦ */
-
-.owner {
-  background: linear-gradient(145deg, #260d16, #100b17);
-  border: 2px solid #e52d4c;
-  box-shadow: 0 0 25px #9e173c55;
-  padding: 35px 20px;
-  text-align: center;
-  margin-bottom: 55px;
-}
-
-.owner .avatar {
-  width: 115px;
-  height: 115px;
-  margin: auto;
-  border: 2px solid #ff405c;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 45px;
-  background: #170912;
-  box-shadow: 0 0 25px #e52d4c;
-}
-
-.owner h2 {
-  color: #ff526b;
-  letter-spacing: 4px;
-  margin-bottom: 8px;
-}
-
-.owner .rank {
-  color: #ff8a9c;
-  font-weight: bold;
-  letter-spacing: 3px;
-}
-
-.owner p {
-  color: #c9b5bd;
-  line-height: 1.8;
-}
-
-/* АДМИНИСТРАЦИЯ */
-
 .section-title {
   text-align: center;
   color: #d4a5ff;
   letter-spacing: 4px;
-  margin: 40px 0 30px;
+  margin: 45px 0 30px;
+}
+
+.intro {
+  text-align: center;
+  color: #a99bb5;
+  line-height: 1.8;
+  margin-bottom: 35px;
 }
 
 .cards {
@@ -121,10 +84,11 @@ h1 {
 .card {
   background: linear-gradient(145deg, #191021, #100b17);
   border: 1px solid #8136b5;
-  padding: 25px 15px;
-  text-align: center;
+  padding: 25px 20px;
+  text-align: left;
   transition: .3s;
   box-shadow: 0 0 12px #8136b522;
+  position: relative;
 }
 
 .card:hover {
@@ -133,40 +97,54 @@ h1 {
   box-shadow: 0 0 22px #963cff55;
 }
 
-.avatar {
-  width: 75px;
-  height: 75px;
-  margin: auto;
-  border: 1px solid #a75be8;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  color: #d4a5ff;
-  background: #21132d;
-}
-
 .card h3 {
   color: #d4a5ff;
   letter-spacing: 2px;
-  margin-bottom: 8px;
+  font-size: 17px;
+  margin: 12px 0;
 }
 
 .code {
   display: inline-block;
   color: #dcb8ff;
   border: 1px solid #963cff;
-  padding: 5px 13px;
-  margin: 5px;
+  padding: 6px 14px;
+  margin: 5px 0 12px;
   font-size: 12px;
   letter-spacing: 2px;
+}
+
+.label {
+  color: #c99aff;
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-top: 13px;
+  text-transform: uppercase;
 }
 
 .card p {
   color: #a99bb5;
   font-size: 13px;
-  line-height: 1.6;
+  line-height: 1.7;
+  margin: 6px 0;
+}
+
+.quantity {
+  color: #dcb8ff !important;
+  border-top: 1px solid #372344;
+  padding-top: 12px;
+  margin-top: 15px !important;
+}
+
+.status {
+  display: inline-block;
+  color: #c99aff;
+  background: #291738;
+  border: 1px solid #693c91;
+  padding: 5px 10px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin-top: 10px;
 }
 
 footer {
@@ -185,16 +163,12 @@ footer {
   }
 
   .cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .card {
-    padding: 20px 8px;
-  }
-
-  .card h3 {
-    font-size: 14px;
+    padding: 22px 18px;
   }
 }
 </style>
@@ -210,24 +184,40 @@ footer {
 <main>
 
 <h1>АДМИНИСТРАЦИЯ</h1>
-<div class="subtitle">РУКОВОДСТВО ОРДЕНА ЧЁРНОГО ВОРОНА</div>
 
-<!-- ВЛАДЕЛЕЦ -->
+<div class="subtitle">
+СТРУКТУРА ОРДЕНА ЧЁРНОГО ВОРОНА
+</div>
 
-<div class="owner">
-  <div class="avatar">🐦‍⬛</div>
-  <h2>СОН ДЖИН ВУ</h2>
-  <div class="rank">EX — ВЛАДЕЛЕЦ</div>
+<p class="intro">
+Администрация NOXIUM — система должностей,
+ответственных за управление, развитие и
+организацию деятельности Ордена.
+<br>
+Здесь представлены должности, их коды,
+обязанности и количество мест.
+</p>
 
-  <p>
-    Основатель и владелец NOXIUM.<br>
-    Отвечает за развитие, устройство
-    и будущее Ордена.
-  </p>
+<h2 class="section-title">ВЛАДЕНИЕ</h2>
 
-  <p>
-    Интересы: игры, кулинария, дизайн.
-  </p>
+<div class="cards">
+
+  <div class="card">
+    <h3>ВЛАДЕЛЕЦ</h3>
+    <span class="code">EX</span>
+
+    <div class="label">Обязанности</div>
+    <p>
+      Полное руководство NOXIUM.
+      Принятие главных решений,
+      развитие проекта и контроль
+      всей структуры Ордена.
+    </p>
+
+    <div class="quantity">Количество мест: 1</div>
+    <span class="status">ГЛАВНАЯ ДОЛЖНОСТЬ</span>
+  </div>
+
 </div>
 
 <h2 class="section-title">РУКОВОДСТВО</h2>
@@ -235,124 +225,154 @@ footer {
 <div class="cards">
 
   <div class="card">
-    <div class="avatar">R</div>
-    <h3>РУДИУС</h3>
+    <h3>ВЕРХОВНЫЙ АДМИНИСТРАТОР</h3>
     <span class="code">VAD</span>
-    <p>Верховный администратор</p>
+
+    <div class="label">Обязанности</div>
+    <p>
+      Общее руководство администрацией,
+      контроль работы всех отделов
+      и исполнение решений владельца.
+    </p>
+    <span class="status">РУКОВОДСТВО</span>
   </div>
 
   <div class="card">
-    <div class="avatar">S</div>
-    <h3>САКУРА</h3>
+    <h3>СЕКРЕТАРЬ ВЛАДЕЛЬЦА</h3>
     <span class="code">SEC</span>
-    <p>Секретарь владельца</p>
+
+    <div class="label">Обязанности</div>
+    <p>
+      Помощь владельцу, передача информации,
+      ведение важных записей
+      и организационных вопросов.
+    </p>
+    <span class="status">РУКОВОДСТВО</span>
   </div>
 
   <div class="card">
-    <div class="avatar">H</div>
-    <h3>ГЛАВА МОДЕРАЦИИ</h3>
+    <h3>ГЛАВНЫЙ АДМИНИСТРАТОР МОДЕРАЦИИ</h3>
     <span class="code">HMO</span>
-    <p>Главный администратор модерации</p>
+
+    <div class="label">Обязанности</div>
+    <p>
+      Руководство модерацией,
+      контроль модераторов
+      и соблюдения правил сообщества.
+    </p>
+    <span class="status">РУКОВОДСТВО</span>
   </div>
 
   <div class="card">
-    <div class="avatar">H</div>
-    <h3>ГЛАВА РЕКРУТИНГА</h3>
+    <h3>ГЛАВНЫЙ АДМИНИСТРАТОР РЕКРУТИНГА</h3>
     <span class="code">HRC</span>
-    <p>Главный администратор рекрутинга</p>
+
+    <div class="label">Обязанности</div>
+    <p>
+      Руководство рекрутерами,
+      развитие набора участников
+      и контроль процесса вступления.
+    </p>
+    <span class="status">РУКОВОДСТВО</span>
   </div>
 
   <div class="card">
-    <div class="avatar">H</div>
-    <h3>ГЛАВА ТВОРЧЕСТВА</h3>
+    <h3>ГЛАВНЫЙ АДМИНИСТРАТОР ТВОРЧЕСКОГО ОТДЕЛА</h3>
     <span class="code">HCR</span>
-    <p>Главный администратор творческого отдела</p>
+
+    <div class="label">Обязанности</div>
+    <p>
+      Руководство творческим отделом,
+      распределение задач и контроль
+      качества творческих проектов.
+    </p>
+    <span class="status">РУКОВОДСТВО</span>
   </div>
 
 </div>
 
-<h2 class="section-title">ОТДЕЛЫ И АДМИНИСТРАТОРЫ</h2>
+<h2 class="section-title">ОТДЕЛЫ И ДОЛЖНОСТИ</h2>
 
 <div class="cards">
 
   <div class="card">
-    <div class="avatar">D</div>
     <h3>ДИЗАЙНЕР</h3>
     <span class="code">DSN</span>
-    <p>Создание графики и оформления</p>
-    <p>Количество: 1</p>
+    <div class="label">Обязанности</div>
+    <p>Создание графики, эмблем, баннеров и оформления NOXIUM.</p>
+    <p class="quantity">Количество мест: 1</p>
   </div>
 
   <div class="card">
-    <div class="avatar">E</div>
     <h3>МОНТАЖЁР</h3>
     <span class="code">EDT</span>
-    <p>Монтаж видеоматериалов</p>
-    <p>Количество: 1</p>
+    <div class="label">Обязанности</div>
+    <p>Монтаж видеоматериалов, создание роликов и видеоконтента.</p>
+    <p class="quantity">Количество мест: 1</p>
   </div>
 
   <div class="card">
-    <div class="avatar">M</div>
     <h3>МЕДИА-АДМИНИСТРАТОР</h3>
     <span class="code">MED</span>
-    <p>Работа с медиа и публикациями</p>
-    <p>Количество: 1</p>
+    <div class="label">Обязанности</div>
+    <p>Работа с медиа, публикациями и информационным содержанием сообщества.</p>
+    <p class="quantity">Количество мест: 1</p>
   </div>
 
   <div class="card">
-    <div class="avatar">M</div>
     <h3>МОДЕРАТОР</h3>
     <span class="code">MOD</span>
-    <p>Контроль порядка в сообществе</p>
-    <p>Количество: 5</p>
+    <div class="label">Обязанности</div>
+    <p>Контроль порядка, соблюдения правил и решение конфликтных ситуаций.</p>
+    <p class="quantity">Количество мест: 5</p>
   </div>
 
   <div class="card">
-    <div class="avatar">S</div>
     <h3>ПОДДЕРЖКА</h3>
     <span class="code">SUP</span>
-    <p>Помощь участникам</p>
-    <p>Количество: 1</p>
+    <div class="label">Обязанности</div>
+    <p>Помощь участникам, ответы на вопросы и решение проблем.</p>
+    <p class="quantity">Количество мест: 1</p>
   </div>
 
   <div class="card">
-    <div class="avatar">I</div>
     <h3>ИНСПЕКТОР</h3>
     <span class="code">INS</span>
-    <p>Проверка соблюдения порядка</p>
-    <p>Количество: 1</p>
+    <div class="label">Обязанности</div>
+    <p>Проверка соблюдения правил и контроль деятельности сообщества.</p>
+    <p class="quantity">Количество мест: 1</p>
   </div>
 
   <div class="card">
-    <div class="avatar">R</div>
     <h3>РЕКРУТЕР</h3>
     <span class="code">REC</span>
-    <p>Привлечение новых участников</p>
-    <p>Количество: 3</p>
+    <div class="label">Обязанности</div>
+    <p>Привлечение новых участников и помощь в наборе в NOXIUM.</p>
+    <p class="quantity">Количество мест: 3</p>
   </div>
 
   <div class="card">
-    <div class="avatar">R</div>
     <h3>ПРОВЕРЯЮЩИЙ АНКЕТЫ</h3>
     <span class="code">REV</span>
-    <p>Проверка заявок на вступление</p>
-    <p>Количество: 2</p>
+    <div class="label">Обязанности</div>
+    <p>Проверка заявок, анкет и соответствия требованиям вступления.</p>
+    <p class="quantity">Количество мест: 2</p>
   </div>
 
   <div class="card">
-    <div class="avatar">O</div>
     <h3>ОРГАНИЗАТОР</h3>
     <span class="code">ORG</span>
-    <p>Организация деятельности NOXIUM</p>
-    <p>Количество: 1</p>
+    <div class="label">Обязанности</div>
+    <p>Организация деятельности NOXIUM и координация запланированных мероприятий.</p>
+    <p class="quantity">Количество мест: 1</p>
   </div>
 
   <div class="card">
-    <div class="avatar">C</div>
     <h3>КООРДИНАТОР</h3>
     <span class="code">COR</span>
-    <p>Координация работы администрации</p>
-    <p>Количество: 2</p>
+    <div class="label">Обязанности</div>
+    <p>Координация рабочих процессов и взаимодействия между отделами.</p>
+    <p class="quantity">Количество мест: 2</p>
   </div>
 
 </div>
